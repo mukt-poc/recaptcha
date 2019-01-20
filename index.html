@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="api.js"></script>
+    <!--<script src="recaptcha__en.js"></script>-->
+    <script src="check_avail.js"></script>
+	
+    
+    
+ <script>
+     delete window.document.referrer;
+        window.document.__defineGetter__('referrer', function () {
+            return "https://www.irctc.co.in/nget/train-list";
+        });
+     delete window.document.origin;
+     window.document.__defineGetter__('origin', function () {
+            return "https://www.irctc.co.in/nget/train-list";
+        });
+     window.origin = "https://www.irctc.co.in/nget/train-list";
+
+ 
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
