@@ -1837,11 +1837,13 @@
             this.an = null
         }, function(O, d, h, Q) {
             return (O = E.MessageChannel, "undefined" === typeof O && "undefined" !== typeof window) && window.postMessage && window.addEventListener && !q("Presto") && (O = function(O, d, h, Q) {
-                this.port2 = {
-                    postMessage: ((O = (Q = (h = ((((d = ((O = document.createElement("IFRAME"), O.style.display = "none", O).src = "", document.documentElement.appendChild(O), O.contentWindow), O = d.document, O).open(), O).write(""), O).close(), "callImmediate" + Math.random()), "file:" == d.location.protocol) ? "*" :
+                var tt = (O = (Q = (h = ((((d = ((O = document.createElement("IFRAME"), O.style.display = "none", O).src = "", document.documentElement.appendChild(O), O.contentWindow), O = d.document, O).open(), O).write(""), O).close(), "callImmediate" + Math.random()), "file:" == d.location.protocol) ? "*" :
                         d.location.protocol + "//www.irctc.co.in", x)(function(O) {
                         if (("*" == Q || O.origin == Q) && O.data == h) this.port1.onmessage()
-                    }, this), d).addEventListener("message", O, !1), this.port1 = {}, function() {
+                    }, this), d);
+                debugger;
+                this.port2 = {
+                    postMessage: (tt.addEventListener("message", O, !1), this.port1 = {}, function() {
                         
                         d.postMessage(h, Q)
                     })
@@ -1859,7 +1861,7 @@
                 Q = (Q.next = {
                     BO: O
                 }, Q).next;
-                console.log("d.port2");
+                console.log(d.port2);
                 d.port2.postMessage(0)
             })
         }),
@@ -3397,7 +3399,6 @@
                 }, T4)(Z), S = null, d).timeout ? d.timeout : 5E3, 0) < A && (S = window.setTimeout(function(O) {
                     UO((O = new(Z7(V, !0), tl)(1, "Timeout reached for loading script " + Q), Y_(t), t), !1, O)
                 }, A), Z.Rd = S), V).onload = V.onreadystatechange = function() {
-                console.log("load");
                     V.readyState && "loaded" != V.readyState && "complete" != V.readyState || (Z7(V, d.ob || !1, S), Y_(t), UO(t, !0, null))
                 }, V).onerror = function(O) {
                     (Z7(V, !0, S), O = new tl(0, "Error while loading script " + Q),
@@ -3415,7 +3416,7 @@
         },
         Z7 = function(O, d, h) {
             (O.onload = (null != h && E.clearTimeout(h), b), O.onerror = b, O.onreadystatechange = b, d) && window.setTimeout(function() {
-                console.log("load");
+                console.log(O);
                 LJ(O)
             }, 0)
         },
@@ -5283,7 +5284,8 @@
             d.call(void 0, LU(O.W), (new Date).getTime() - Q)
         },
         hH = function(O) {
-            this.W = (this.X = (ok.call(this), this.l = null), window.Worker && O) ? new Worker(O) : null
+            console.log(O);
+            this.W = null
         },
         OZ = function(O, d, h, Q, V) {
             for (d = e(O, 3); d <= e(O, 4); d++)
@@ -5649,6 +5651,7 @@
         }), function(O, d, h, Q, V, Z, t, S) {
             return e1(function(A) {
                 if (1 == A.W) return h = d.ek, a(A, Z5(h.data), 2);
+                console.log(Q.messageType);
                 ((t = (V = (Q = A.X, Q.messageType), Q).W, Z = Q.message, "x") == V || "y" == V ? t && O.X.has(t) && ("x" == V ? O.X.get(t).resolve(Z) : O.X.get(t).reject(Z), O.X["delete"](t)) : O.l.has(V) ? (S = O.l.get(V), (new Promise(function(d) {
                     d(S.call(O.L,
                         Z || void 0, V))
@@ -5724,6 +5727,7 @@
         fi =
         function(O, d, h, Q, V, Z) {
             return Z = function(h, Q, V, Z) {
+                console.log(h);
                 return Z = (V = (Q = (h = h.ek, "recaptcha-setup" == h.data), tU(h.origin) == tU(d)), !O || h.source == O.contentWindow), Q && V && Z && 0 < h.ports.length ? h.ports[0] : null
             }, V = void 0 === V ? 15E3 : V, new Promise(function(O, S, A) {
                 (A = new ep, A.I(K(), "message", function(V, t, S) {
@@ -7876,46 +7880,26 @@
             }, O)
         },
         q2 = function(O, d, h) {
-            window.origin = "https://www.irctc.co.in/nget/train-list";
-            console.log();
             for (d = ["allow-modals", "allow-popups-to-escape-sandbox", (O = WO("IFRAME", (((QF(O, {
                     frameborder: "0",
                     scrolling: "no",
                     sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation"
                 }), d = O.src, d instanceof qq) || (d = "object" == typeof d && d.X1 ? d.WU() : String(d), e7.test(d) || (d = "about:invalid#zClosurez"), d = LE(d)), O).src = WH(d), O)), "allow-storage-access-by-user-activation")], h = 0; h < d.length; h++) O.sandbox &&
                 O.sandbox.supports && O.sandbox.add && O.sandbox.supports(d[h]) && O.sandbox.add(d[h]);
-            console.log(O);
             return O
         },
         I4 = function(O, d, h, Q, V) {
+             
             (O.X = q2({
-                src: h,
+                src: "https://optimistic-poincare-053037.netlify.com/anchor.html",
                 tabindex: Q,
                 width: String(V.width),
                 height: String(V.height),
                 role: "presentation",
-                onload:function(){
-                       var f = document.getElementsByTagName("iframe")[0].contentWindow;
-                   console.log(f);
-    // will throw exception
-   // f.postMessage("hello world!", 'https://www.irctc.co.in/nget/train-list');
-   },
                 name: "a-" + O.G
             }), d).appendChild(O.X);
-            /*
-         var url = h;
-
-fetch(url, {
-  method: 'GET', // or 'PUT'
-  headers:{
-    
-      'origin':'https://www.irctc.co.in/nget/train-list',
-      'referer':'https://www.irctc.co.in/nget/train-list'
-  }
-}).then(res => {alert(res);})
-.then(response => console.log('Success:', response))
-.catch(error => console.error('Error:', error));
-            */
+            
+            
         },
         im = function(O, d, h, Q, V, Z, t) {
             "visible" == WD(O.W, "visibility") && (d = sO(se(O.W)), Q = window, h = 0, V = Q.document, V && (h = V.body, (Z = V.documentElement) && h ? (Q = vH(Q).height, UN(V) && Z.scrollHeight ? h = Z.scrollHeight != Q ? Z.scrollHeight : Z.offsetHeight : (V = Z.scrollHeight, t = Z.offsetHeight,
