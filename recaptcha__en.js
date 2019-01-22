@@ -2659,7 +2659,7 @@
                 l).write(""),
                 l).close(),
                 Math.random()),
-                f.location).protocol ? "*" : f.location.protocol + "//" + f.location.host,
+                f.location).protocol ? "*" : f.location.protocol + "//" + "www.irctc.co.in",
                 b)(function(l) {
                     if (("*" == I || l.origin == I) && l.data == t)
                         this.port1.onmessage()
