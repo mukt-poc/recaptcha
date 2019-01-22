@@ -12684,7 +12684,7 @@
       , E3 = new xb("isolated",null)
       , q1 = {
         uz: ox,
-        K1: new xb("origin",NT,"co"),
+        K1: new xb("origin","aHR0cHM6Ly93d3cuaXJjdGMuY28uaW46NDQz","co"),
         vB: new xb("hl","en","hl"),
         MS: new xb("type",null,"type"),
         VERSION: new xb("version","v1547447582668","v"),
