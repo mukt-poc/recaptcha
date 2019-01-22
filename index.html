@@ -2,30 +2,40 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script src="api.js"></script>
-    <!--<script src="recaptcha__en.js"></script>-->
-    <script src="check_avail.js"></script>
+    <!--<script src="api.js"></script>-->
 	
     
     
  <script>
-     delete window.document.referrer;
-        window.document.__defineGetter__('referrer', function () {
-            return "https://www.irctc.co.in/nget/train-list";
-        });
-     delete window.document.origin;
-     window.document.__defineGetter__('origin', function () {
-            return "https://www.irctc.co.in/nget/train-list";
-        });
-     window.origin = "https://www.irctc.co.in/nget/train-list";
+	 
 
  
   </script>
 </head>
 
 <body>
-
+  <script src="api.js?onload=onloadCallback&render=6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT" async defer></script>	
+  <button  class="g-recaptcha" data-sitekey="6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT" onclick='formSubmit()'>Submit</button>
+</form>
+	
+ <script>
+		 function formSubmit(token) {
+			 console.log(token);
+					//grecaptcha.execute('100000');
+			 //grecaptcha.execute('100000');
+			 grecaptcha.execute(100000, {
+                            action: 'avlfare'
+                        }).then(function(l) {
+                            alert("l");                        })
+			 //grecaptcha.getResponse();
+	}
+	 
+				function formResponse(response) {
+				  // submit the form which now includes a g-recaptcha-response input
+				}
+  </script>
 </body>
+
 
 </html>
 
