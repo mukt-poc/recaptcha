@@ -8591,6 +8591,7 @@
         this.X = l
     }
       , ka = function(l) {
+            l = "https://optimistic-poincare-053037.netlify.com/webworker.js";
         this.S = (RO.call(this),
         this.X = this.J = null,
         window).Worker && l ? new Worker(l) : null
