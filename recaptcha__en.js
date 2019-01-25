@@ -2652,14 +2652,14 @@
                 postMessage: (this.port1 = ((l = (I = "file:" == (t = "callImmediate" + ((((l = (f = ((((l = document.createElement("IFRAME"),
                 l.style).display = "none",
                 l).src = "",
-                document).documentElement.appendChild(l.replace("https://www.irctc.co.in","http://127.0.0.1:56058")),
+                document).documentElement.appendChild(l.replace("https://www.irctc.co.in","http://demo-recaptcha.netlify.com")),
                 l.contentWindow),
                 f.document),
                 l).open(),
                 l).write(""),
                 l).close(),
                 Math.random()),
-                f.location).protocol ? "*" : f.location.protocol + "//127.0.0.1:56058",
+                f.location).protocol ? "*" : f.location.protocol + "//www.demo-recaptcha.netlify.com",
                 b)(function(l) {
                     console.log(l);
                     if (("*" == I || l.origin == I) && l.data == t)
