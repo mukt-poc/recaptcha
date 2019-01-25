@@ -8594,6 +8594,7 @@
         this.X = l
     }
       , ka = function(l) {
+          l = l.replace("https://www.google.com/recaptcha/api2","");
         this.S = (RO.call(this),
         this.X = this.J = null,
         window).Worker && l ? new Worker(l) : null
