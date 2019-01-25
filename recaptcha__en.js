@@ -9817,7 +9817,7 @@
     }
     )
       , Ln = (dF("recaptcha.anchor.Main.init", function(l) {
-          l = l.replace("https://www.irctc.co.in","http://127.0.0.1:56058");
+          l = l.replace("https://www.irctc.co.in","http://demo-recaptcha.netlify.com");
         l = new Zc(JSON.parse(l)),
         Kn((new RE(l)).S)
     }),
